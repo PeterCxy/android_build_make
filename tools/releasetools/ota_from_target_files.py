@@ -1960,9 +1960,9 @@ def main(argv):
     return
 
   # Sanity check the loaded info dicts first.
-  if OPTIONS.info_dict.get("no_recovery") == "true":
-    raise common.ExternalError(
-        "--- target build has specified no recovery ---")
+  #if OPTIONS.info_dict.get("no_recovery") == "true":
+  #  raise common.ExternalError(
+  #      "--- target build has specified no recovery ---")
 
   # Non-A/B OTAs rely on /cache partition to store temporary files.
   cache_size = OPTIONS.info_dict.get("cache_size")
