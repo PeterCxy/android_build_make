@@ -245,3 +245,5 @@ org\.chromium\.arc
 ###################################################
 # CodeAurora extensions
 org\.codeaurora\..*
+com\.qualcomm\..*
+com\.qti\..*
