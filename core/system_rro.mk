@@ -1,5 +1,4 @@
-#
-# Copyright (C) 2008 The Android Open Source Project
+# Copyright (C) 2018 The LineageOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -12,10 +11,17 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-#
-# BUILD_ID is usually used to specify the branch name
-# (like "MAIN") or a branch name and a release candidate
-# (like "CRB01").  It must be a single word, and is
-# capitalized by convention.
 
-export BUILD_ID=PQ1A.181205.006
+LOCAL_IS_RUNTIME_RESOURCE_OVERLAY := true
+
+ifneq ($(LOCAL_SRC_FILES),)
+  $(error runtime resource overlay package should not contain sources)
+endif
+
+ifeq ($(LOCAL_RRO_THEME),)
+  $(error runtime resource overlay package must define \'LOCAL_RRO_THEME\')
+else
+  LOCAL_MODULE_PATH := $(TARGET_OUT)/overlay/$(LOCAL_RRO_THEME)
+endif
+
+include $(BUILD_SYSTEM)/package.mk

@@ -1093,3 +1093,5 @@ $(eval include vendor/nitrogen/sepolicy/sepolicy.mk)
 include $(TOPDIR)vendor/nitrogen/config/qcom_target.mk
 
 include $(BUILD_SYSTEM)/dumpvar.mk
+
+BUILD_RRO_SYSTEM_PACKAGE := $(BUILD_SYSTEM)/system_rro.mk
