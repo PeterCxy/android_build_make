@@ -247,3 +247,4 @@ org\.chromium\.arc
 org\.codeaurora\..*
 com\.qualcomm\..*
 com\.qti\..*
+
