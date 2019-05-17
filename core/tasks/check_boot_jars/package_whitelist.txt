@@ -241,3 +241,6 @@ com\.google\.vr\.platform.*
 ###################################################
 # Packages used for Android in Chrome OS
 org\.chromium\.arc
+
+# CAF
+org\.codeaurora\..*
